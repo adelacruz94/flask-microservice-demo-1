@@ -1,6 +1,7 @@
-FROM alpine
+FROM alpine:3.16
 
-RUN apk add --no-cache python3
+# Instala Python3 y pip3
+RUN apk add --no-cache python3 py3-pip
 
 ADD requirements.pip requirements.pip
 RUN pip3 install -r requirements.pip
